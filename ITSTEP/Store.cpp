@@ -25,6 +25,44 @@ struct Store {
     int cartSize;
 };
 
+void add_data(Store& store) {
+    add_category(store, "Dairy");
+    add_product(store, "Milk", 0);
+    add_product(store, "Cheese", 0);
+    add_product(store, "Yogurt", 0);
+    add_product(store, "Butter", 0);
+    add_product(store, "Cream", 0);
+
+    add_category(store, "Cereals");
+    add_product(store, "Oatmeal", 1);
+    add_product(store, "Corn Flakes", 1);
+    add_product(store, "Granola", 1);
+    add_product(store, "Rice Krispies", 1);
+    add_product(store, "Wheat Bran", 1);
+
+    add_category(store, "Bakery");
+    add_product(store, "Bread", 2);
+    add_product(store, "Croissant", 2);
+    add_product(store, "Muffin", 2);
+    add_product(store, "Bagel", 2);
+    add_product(store, "Bun", 2);
+
+    add_category(store, "Meat");
+    add_product(store, "Beef", 3);
+    add_product(store, "Chicken", 3);
+    add_product(store, "Pork", 3);
+    add_product(store, "Lamb", 3);
+    add_product(store, "Turkey", 3);
+
+    add_category(store, "Fruits");
+    add_product(store, "Apple", 4);
+    add_product(store, "Banana", 4);
+    add_product(store, "Orange", 4);
+    add_product(store, "Grapes", 4);
+    add_product(store, "Pineapple", 4);
+
+    add_category(store, "Back");
+}
 
 
 void add_category(Store& store, const string& name) {
@@ -292,6 +330,7 @@ int main() {
     store.cart = new string[0];
     store.cartSize = 0;
 
+    add_data(store);
     while (true) {
         start(store, "");
     }

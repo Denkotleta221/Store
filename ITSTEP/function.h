@@ -4,8 +4,8 @@ using std::string;
 
 struct Store;
 void initialize_data(Store& store);
-void add_category(Store& store, const string& name);
-void add_product(Store& store, const string& name, int categoryIndex);
+void add_category(Store& store, string name);
+void add_product(Store& store, string name, int categoryIndex);
 void start(Store& store, string text = "");
 void log_in(Store& store);
 void sign_in(Store& store);

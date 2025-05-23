@@ -65,13 +65,13 @@ void add_data(Store& store) {
 }
 
 
-void add_category(Store& store, const string& name) {
+void add_category(Store& store, string name) {
     if (store.categoryCount < 10) {
         store.categories[store.categoryCount++] = { name };
     }
 }
 
-void add_product(Store& store, const string& name, int categoryIndex) {
+void add_product(Store& store, string name, int categoryIndex) {
     if (store.productCount < 100) {
         store.products[store.productCount++] = { name, categoryIndex };
     }
